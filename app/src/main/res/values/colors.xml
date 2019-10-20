@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="goldYellowColor">#ffdf00</color>
+    <color name="light_gold_color">#FFD706</color>
+    <color name="red_color">#D90023</color>
+    <color name="linkColor">#95DFD1</color>
+    <color name="metroBlue">#00B4FF</color>
+    <color name="redPink">#FF404B</color>
+    <color name="white">#fff</color>
+    <color name="pinkcolor">#FE4365</color>
+    <color name="black">#000</color>
+    <color name="lightBlack">#050505</color>
+</resources>

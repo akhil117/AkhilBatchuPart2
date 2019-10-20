@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Resume">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/imageWidth"
+        android:layout_height="@dimen/imageHeight"
+        android:layout_marginTop="@dimen/updatedMarginTop"
+        android:layout_marginEnd="@dimen/pictureEndMargin"
+        android:layout_marginRight="@dimen/pictureRightMargin"
+        android:layout_marginBottom="@dimen/pictureMarginEnd"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toStartOf="@+id/name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/akhilbatchu1" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/marginEnd"
+        android:layout_marginRight="@dimen/marginRight"
+        android:text="@string/akhilbatchu_b_tech"
+        android:textColor="@color/goldYellowColor"
+        android:textSize="@dimen/textSizeDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="@dimen/image_zero_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/startMargin"
+        android:layout_marginLeft="@dimen/leftMargin"
+        android:layout_marginTop="@dimen/profileTopMargin"
+        android:layout_marginEnd="@dimen/profileEndMargin"
+        android:layout_marginRight="@dimen/profileRightMargin"
+        android:text="@string/student_amrita"
+        android:textColor="@color/goldYellowColor"
+        android:textSize="@dimen/textSizeDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="@dimen/image_zero_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/startMargin"
+        android:layout_marginLeft="@dimen/leftMargin"
+        android:layout_marginTop="@dimen/profileTopMargin"
+        android:onClick="getLocation"
+        android:text="@string/amritapuri_kollam"
+        android:textColor="@color/goldYellowColor"
+        android:textSize="@dimen/textSizeDescription"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="@dimen/image_zero_dp"
+        android:layout_height="@dimen/image_zero_dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cons2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/skill1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStart"
+                android:layout_marginLeft="@dimen/leftMargin"
+                android:layout_marginTop="@dimen/above"
+                android:text="@string/android"
+                android:textColor="@color/goldYellowColor"
+                android:textSize="@dimen/title_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cons2" />
+
+            <TextView
+                android:id="@+id/course1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top"
+                android:text="@string/_2_udemy_courses"
+                android:textColor="@color/light_gold_color"
+                android:textSize="@dimen/description_size"
+                app:layout_constraintStart_toStartOf="@+id/skill1"
+                app:layout_constraintTop_toBottomOf="@+id/skill1" />
+
+            <TextView
+                android:id="@+id/Level1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/above"
+                android:layout_marginEnd="@dimen/above"
+                android:layout_marginRight="@dimen/above"
+                android:layout_marginBottom="@dimen/endMargin"
+                android:text="@string/level_6"
+                android:textColor="@color/goldYellowColor"
+                android:textSize="@dimen/title_size"
+                app:layout_constraintBottom_toBottomOf="@+id/skill1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cons2" />
+
+            <TextView
+                android:id="@+id/javaRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top"
+                android:layout_marginEnd="@dimen/above"
+                android:layout_marginRight="@dimen/above"
+                android:layout_marginBottom="@dimen/endMargin"
+                android:text="@string/range_1"
+                android:textColor="@color/light_gold_color"
+                android:textSize="@dimen/description_size"
+                app:layout_constraintBottom_toBottomOf="@+id/eduonixSite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/javaLevel" />
+
+            <TextView
+                android:id="@+id/range1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top"
+                android:layout_marginEnd="@dimen/above"
+                android:layout_marginRight="@dimen/above"
+                android:layout_marginBottom="@dimen/endMargin"
+                android:text="@string/range_1"
+                android:textColor="@color/light_gold_color"
+                android:textSize="@dimen/description_size"
+                app:layout_constraintBottom_toBottomOf="@+id/course1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Level1" />
+
+            <TextView
+                android:id="@+id/course2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStart"
+                android:layout_marginLeft="@dimen/leftMargin"
+                android:layout_marginTop="@dimen/above"
+                android:text="@string/java"
+                android:textColor="@color/goldYellowColor"
+                android:textSize="@dimen/title_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/course1" />
+
+            <TextView
+                android:id="@+id/javaLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/above"
+                android:layout_marginEnd="@dimen/above"
+                android:layout_marginRight="@dimen/above"
+                android:layout_marginBottom="@dimen/endMargin"
+                android:text="@string/level_8"
+                android:textColor="@color/goldYellowColor"
+                android:textSize="@dimen/title_size"
+                app:layout_constraintBottom_toBottomOf="@+id/course2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/range1" />
+
+            <TextView
+                android:id="@+id/eduonixSite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStart"
+                android:layout_marginLeft="@dimen/leftMargin"
+                android:layout_marginTop="@dimen/top"
+                android:text="@string/eduonix"
+                android:textColor="@color/light_gold_color"
+                android:textSize="@dimen/description_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/course2" />
+
+            <TextView
+                android:id="@+id/mLearning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStart"
+                android:layout_marginLeft="@dimen/leftMargin"
+                android:layout_marginTop="@dimen/above"
+                android:text="@string/machinelearning"
+                android:textColor="@color/goldYellowColor"
+                android:textSize="@dimen/title_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/eduonixSite" />
+
+            <TextView
+                android:id="@+id/mLearningLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/above"
+                android:layout_marginEnd="@dimen/above"
+                android:layout_marginRight="@dimen/above"
+                android:layout_marginBottom="@dimen/endMargin"
+                android:text="@string/level"
+                android:textColor="@color/goldYellowColor"
+                android:textSize="@dimen/title_size"
+                app:layout_constraintBottom_toBottomOf="@+id/mLearning"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/javaRange" />
+
+            <TextView
+                android:id="@+id/Verzeo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStart"
+                android:layout_marginLeft="@dimen/leftMargin"
+                android:layout_marginTop="@dimen/top"
+                android:text="@string/verzeo"
+                android:textColor="@color/light_gold_color"
+                android:textSize="@dimen/description_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mLearning" />
+
+            <TextView
+                android:id="@+id/machineLearningRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top"
+                android:layout_marginEnd="@dimen/endMargins"
+                android:layout_marginRight="@dimen/rightMargins"
+                android:layout_marginBottom="@dimen/endMargin"
+                android:text="@string/range_1"
+                android:textColor="@color/light_gold_color"
+                android:textSize="@dimen/description_size"
+                app:layout_constraintBottom_toBottomOf="@+id/Verzeo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mLearningLevel" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStart"
+                android:layout_marginLeft="@dimen/leftMargin"
+                android:layout_marginTop="@dimen/top"
+                android:text="@string/programming"
+                android:textColor="@color/goldYellowColor"
+                android:textSize="@dimen/title_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Verzeo" />
+
+            <TextView
+                android:id="@+id/programmingLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/above"
+                android:layout_marginEnd="@dimen/marginStart"
+                android:layout_marginRight="@dimen/startMargin"
+                android:layout_marginBottom="@dimen/endMargin"
+                android:text="@string/level_8"
+                android:textColor="@color/goldYellowColor"
+                android:textSize="@dimen/title_size"
+                app:layout_constraintBottom_toBottomOf="@+id/textView20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/machineLearningRange" />
+
+            <TextView
+                android:id="@+id/codeForce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStart"
+                android:layout_marginLeft="@dimen/leftMargin"
+                android:layout_marginTop="@dimen/top"
+                android:text="@string/codeforce"
+                android:textColor="@color/light_gold_color"
+                android:textSize="@dimen/description_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+
+            <TextView
+                android:id="@+id/programmingRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/above"
+                android:layout_marginEnd="@dimen/endMargins"
+                android:layout_marginRight="@dimen/rightMargins"
+                android:layout_marginBottom="@dimen/endMargin"
+                android:text="@string/range_1"
+                android:textColor="@color/light_gold_color"
+                android:textSize="@dimen/description_size"
+                app:layout_constraintBottom_toBottomOf="@+id/codeForce"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/programmingLevel" />
+
+            <TextView
+                android:id="@+id/github"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStart"
+                android:layout_marginLeft="@dimen/leftMargin"
+                android:layout_marginTop="@dimen/above"
+                android:text="@string/github"
+                android:textColor="@color/red_color"
+                android:textSize="@dimen/githubTextSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/codeForce" />
+
+            <TextView
+                android:id="@+id/githubUrl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/startMargin"
+                android:layout_marginLeft="@dimen/leftMargin"
+                android:layout_marginTop="@dimen/top"
+                android:onClick="redirectToGithub"
+                android:text="@string/github_url"
+                android:textColor="@color/linkColor"
+                android:textSize="@dimen/githubLinkSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/github" />
+
+            <TextView
+                android:id="@+id/linkedin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/startMargin"
+                android:layout_marginLeft="@dimen/leftMargin"
+                android:layout_marginTop="@dimen/above"
+                android:text="@string/linkedin"
+                android:textColor="@color/red_color"
+                android:textSize="@dimen/LinkedinSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/githubUrl" />
+
+            <TextView
+                android:id="@+id/linkedinUrl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/startMargin"
+                android:layout_marginLeft="@dimen/leftMargin"
+                android:layout_marginTop="@dimen/top"
+                android:onClick="redirectToLinkedin"
+                android:text="@string/linkedin_url"
+                android:textColor="@color/linkColor"
+                android:textSize="@dimen/githubLinkSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linkedin" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/phoneText"
+        android:layout_width="@dimen/resumePictureWidth"
+        android:layout_height="@dimen/phoneTextHeightUpdated"
+        android:layout_marginStart="@dimen/iconBottom"
+        android:layout_marginLeft="@dimen/iconBottom"
+        android:layout_marginTop="@dimen/phoneMarginTop"
+        android:layout_marginEnd="@dimen/phoneMarginEnd"
+        android:layout_marginRight="@dimen/phoneMarginRight"
+        android:onClick="makeCall"
+        android:text="@string/myPhoneNumber"
+        android:textColor="@color/metroBlue"
+        android:textSize="@dimen/phoneTextSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/callIcon"
+        app:layout_constraintTop_toBottomOf="@+id/location" />
+
+    <ImageView
+        android:id="@+id/callIcon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/iconBottom"
+        android:layout_marginLeft="@dimen/iconBottom"
+        android:layout_marginTop="@dimen/iconTop"
+        android:layout_marginBottom="@dimen/iconBottom"
+        android:onClick="makeCall"
+        app:layout_constraintBottom_toBottomOf="@+id/phoneText"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/location"
+        app:srcCompat="@android:drawable/sym_action_call" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="@dimen/updateImageViewWidth"
+        android:layout_height="@dimen/imageViewHeight"
+        android:layout_marginEnd="@dimen/startMargin"
+        android:layout_marginRight="@dimen/startMargin"
+        android:onClick="getLocation"
+        android:src="@drawable/ic_location_on_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/location" />
+
+</android.support.constraint.ConstraintLayout>

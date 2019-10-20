@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/clearAll"
+        android:title="@string/clear_all"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/multiShare"
+        android:icon="@drawable/social"
+        android:title="@string/share"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/Resume"
+        android:title="@string/about_us"
+        app:showAsAction="never" />
+</menu>
